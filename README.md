@@ -32,16 +32,23 @@ jobs:
   bake:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
 
+      # Login against a Docker registry
+      # https://github.com/docker/login-action
+      - name: Log into registry ${{ env.REGISTRY }}
+        if: inputs.password
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Build and push Docker image with Buildx Bake
+      # https://github.com/soramitsukhmer/publish-docker-action
       - name: Build and push
         uses: soramitsukhmer/publish-docker-action@v1
         with:
-          registry: ${{ env.REGISTRY }}
-          username: username
-          password: password
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           targets: build
           push: true
