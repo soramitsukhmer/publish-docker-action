@@ -1,4 +1,4 @@
-name: test
+name: ci
 
 on:
   push:
@@ -45,7 +45,7 @@ jobs:
           EOF
 
       - name: Build and Publish to Docker
-        uses: soramitsukhmer/publish-docker-action@v1
+        uses: ./
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           targets: build
