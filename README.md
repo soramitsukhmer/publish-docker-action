@@ -38,7 +38,6 @@ jobs:
       # Login against a Docker registry
       # https://github.com/docker/login-action
       - name: Log into registry ${{ env.REGISTRY }}
-        if: inputs.password
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
