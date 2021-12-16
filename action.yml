@@ -1,5 +1,9 @@
 name: "Build and Publish to Docker"
 description: "Pushes built artifacts to Docker"
+author: 'soramitsukhmer'
+branding:
+  icon: 'anchor'
+  color: 'blue'
 
 inputs:
   registry:
