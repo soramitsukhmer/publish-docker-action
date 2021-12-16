@@ -14,13 +14,13 @@ name: ci
 on:
   schedule:
     # https://crontab.guru/#40_10_*_*_*
-    - cron: '40 10 * * *'
+    - cron: "40 10 * * *"
   push:
-    branches: [ main ]
+    branches: [main]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
+    tags: ["v*.*.*"]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -51,13 +51,18 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           targets: build
           push: true
-      
 ```
 
 ## Customizing
 
-- Docker Login:  https://github.com/docker/login-action#readme
-- Buildx Bake options: https://github.com/docker/bake-action#customizing  
+- Docker Login: https://github.com/docker/login-action#readme
+- Buildx Bake options: https://github.com/docker/bake-action#customizing
+
+| Name    | Type     |                                                    |
+| ------- | -------- | -------------------------------------------------- |
+| images  | List/CSV | List of Docker images to use as base name for tags |
+| targets | List/CSV | List of bake targets                               |
+| push    | Bool     |                                                    |
 
 ## Built-in actions
 
