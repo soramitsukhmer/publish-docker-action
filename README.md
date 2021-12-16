@@ -39,7 +39,7 @@ jobs:
       - name: Build and push
         uses:  soramitsukhmer/publish-docker-action@v1
         with:
-          images: 
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           targets: build
           push: true
       
