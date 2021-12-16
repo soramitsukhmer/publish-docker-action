@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build and push
-        uses:  soramitsukhmer/publish-docker-action@main
+        uses:  soramitsukhmer/publish-docker-action@v1
         with:
           images: 
           targets: build
