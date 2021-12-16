@@ -56,7 +56,8 @@ jobs:
 
 ## Customizing
 
-See https://github.com/docker/bake-action#customizing
+- Docker Login:  https://github.com/docker/login-action#readme
+- Buildx Bake options: https://github.com/docker/bake-action#customizing  
 
 ## Built-in actions
 
@@ -64,7 +65,6 @@ This action composition uses the following actions.
 
 - [docker/setup-qemu-action](https://github.com/docker/setup-qemu-action)
 - [docker/setup-buildx-action](https://github.com/docker/setup-buildx-action)
-- [docker/login-action](https://github.com/docker/login-action)
 - [docker/metadata-action](https://github.com/docker/metadata-action)
 - [docker/bake-action](https://github.com/docker/bake-action)
 
