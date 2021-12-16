@@ -62,7 +62,7 @@ jobs:
 | ------- | -------- | -------------------------------------------------- |
 | images  | List/CSV | List of Docker images to use as base name for tags |
 | targets | List/CSV | List of bake targets                               |
-| push    | Bool     |                                                    |
+| push    | Bool     | Push to registry (default false)                   |
 
 ## Built-in actions
 
