@@ -43,7 +43,7 @@ runs:
 
     # Extract GitHub Action metadata for Docker
     # https://github.com/dockerbakery/github-metadata-action
-    - name: GitHub meta
+    - name: Extract GitHub Docker metadata
       id: github-meta
       uses: dockerbakery/github-metadata-action@v1
 
