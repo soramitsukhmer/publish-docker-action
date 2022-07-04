@@ -1,3 +1,8 @@
+### :warning: Warning :warning: 
+
+This action has been archived.  
+Please migrate to https://github.com/soramitsukhmer/docker-bake-action instead.
+
 # soramitsukhmer/publish-docker-action
 
 This repository is considered **EXPERIMENTAL** and under active development until further notice. It is subject to non-backward compatible changes or removal in any future version so you should [pin to a specific tag/commit](https://docs.github.com/en/actions/creating-actions/about-actions#using-tags-for-release-management) of this action in your workflow (i.e `soramitsukhmer/publish-docker-action@v1`).
